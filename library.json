@@ -1,0 +1,25 @@
+{
+    "name": "FlightRecorderFlash",
+    "keywords": "rocketry, flight recorder, flash",
+    "description": "This library takes a data frame from sensors and organises into partitions/records for easy access and management.",
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/jas256/FlightRecorderFlash"
+    },
+    "authors":
+    {
+        "name": "Jason Ho",
+        "url": "https://github.com/jas256"
+    },
+    "dependencies":
+    {
+        "name": "SPIMemory",
+        "version": "https://https://github.com/jas256/SPIMemory"
+    },
+    "version": "1.0.0",
+    "downloadUrl": "https://github.com/szaffarano/IRNoblex/archive/v1.0.0.tar.gz",
+    "include": "src/FlightRecorder.h",
+    "frameworks": "arduino",
+    "platforms": "*"
+}
