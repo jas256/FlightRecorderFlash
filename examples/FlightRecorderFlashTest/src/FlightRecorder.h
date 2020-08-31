@@ -109,6 +109,12 @@ public:
     byte endFlight();
 
     float calculateAltitude(float current_pressure, float ground_pressure, float ground_temperature);
+    
+    uint8_t getActiveFlightRecord();
+    uint16_t getCurrentRowIdx();
+    float getMinimumPressure();
+    float getStartPressure();
+    float getStartTemperature();
 
     bool loadDataframe(uint8_t flight_number, uint32_t row_index, FlightInfoFrame* data_frame_out);
     bool eraseFlightRecord(uint8_t flight_number);

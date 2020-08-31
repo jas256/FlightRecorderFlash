@@ -39,8 +39,6 @@ void setup()
     recorder.endFlight();
     Serial.printf("Completed Writing in %lu \n\nData: \n\n", end_time-start_time);
 
-    int flight_no = 0;
-
     Serial.printf("Printing Data for Flight %d\n\n", flight_no);
     Serial.printf("timestamp,abs pressure,\n");
     for (int i = 0; i < 180; i++)

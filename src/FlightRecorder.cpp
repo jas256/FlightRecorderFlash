@@ -172,3 +172,28 @@ float FlightRecorder::calculateAltitude(float current_pressure, float ground_pre
     float p_pb = pow((current_pressure / ground_pressure), constant_exponent) - 1;
     return tb_lb * p_pb;
 }
+
+uint8_t FlightRecorder::getActiveFlightRecord()
+{
+    return active_flight_record_;
+}
+
+uint16_t FlightRecorder::getCurrentRowIdx()
+{
+    return current_write_row_idx_;
+}
+
+float FlightRecorder::getMinimumPressure()
+{
+    return min_pressure_;
+}
+
+float FlightRecorder::getStartPressure()
+{
+    return start_pressure_;
+}
+
+float FlightRecorder::getStartTemperature()
+{
+    return start_temperature_;
+}
