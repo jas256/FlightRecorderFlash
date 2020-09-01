@@ -62,7 +62,8 @@ struct alignas(4) RecorderMetadata
 {
     uint8_t current_flight_record = 0;
     uint8_t last_successful_flight = 0;
-    uint8_t reserved[2];
+    uint8_t initialised_val = 221;
+    uint8_t reserved;
 
     bool flight_record_contains_data[4] = {0,0,0,0};
     bool flight_in_progress[4] = {0,0,0,0};

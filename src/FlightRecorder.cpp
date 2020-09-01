@@ -145,7 +145,7 @@ bool FlightRecorder::begin()
     EEPROM.begin(1024);
 #endif
     loadMetadata();
-    if (current_metadata_.current_flight_record >= memory_map_->number_of_records())
+    if (current_metadata_.initialised_val != 221)
     {
         RecorderMetadata reset_metadata;
         EEPROM.put(eeprom_address_, reset_metadata);
