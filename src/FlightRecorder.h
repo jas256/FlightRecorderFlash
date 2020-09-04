@@ -30,19 +30,19 @@ struct MemoryMap1M : FlashMemoryMap // Calculated with the Excel Spreadsheet
 
 enum class EventCode : byte
 {
-    NO_EVENT = 0b00000000,
-    LAUNCHED_OFF_RAIL = 0b00000001,
-    APOGEE = 0b00000010,
-    LANDED = 0b00000100
+    NO_EVENT = 0,
+    LAUNCHED_OFF_RAIL = 1,
+    APOGEE = 2,
+    LANDED = 3
 };
 
 enum class DepolymentEvent : byte
 {
-    DEPLOY_NO_EVENT = 0b00000000,
-    DEPLOY_MAIN_DEPLOYED = 0b00010000,
-    DEPLOY_DROUGUE_DEPLOYED = 0b00100000,
-    DEPLOY_MAIN2_DEPLOYED = 0b01000000,
-    DEPLOY_DROUGUE2_DEPLOYED = 0b10000000
+    DEPLOY_NO_EVENT = 0,
+    DEPLOY_MAIN_DEPLOYED = 1,
+    DEPLOY_DROUGUE_DEPLOYED = 2,
+    DEPLOY_MAIN2_DEPLOYED = 3,
+    DEPLOY_DROUGUE2_DEPLOYED = 4
 };
 
 struct alignas(4) FlightInfoFrame
