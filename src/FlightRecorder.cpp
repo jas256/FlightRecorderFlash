@@ -79,13 +79,13 @@ byte FlightRecorder::beginFlight(bool override = false)
         return 253;
     }
     active_flight_record_ = current_metadata_.current_flight_record;
-    if (current_metadata_.current_flight_record < memory_map_->number_of_records())
+    if (current_metadata_.current_flight_record + 1 >= memory_map_->number_of_records())
     {
-        current_metadata_.current_flight_record++;
+        current_metadata_.current_flight_record = 0;
     }
     else
     {
-        current_metadata_.current_flight_record = 0;
+        current_metadata_.current_flight_record++;
     }
 
     current_metadata_.flight_in_progress[active_flight_record_] = true;
